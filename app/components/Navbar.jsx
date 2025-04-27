@@ -3,10 +3,10 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
-import { MdOutlineComputer } from "react-icons/md";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
 
   const openMenu = () => {
@@ -17,6 +17,21 @@ const Navbar = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
@@ -26,19 +41,27 @@ const Navbar = () => {
           className="w-full"
         />
       </div>
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
         <Link href="/" className="flex items-center space-x-2">
-          <div className="inline-flex items-center gap-2">
-            <div className="bg-rose-600 p-2 rounded-md shadow-sm">
-              <MdOutlineComputer className="text-white text-xl" />
+          <div className="inline-flex items-center space-x-1">
+            <div className="flex items-center justify-center bg-rose-600 p-2 w-8 h-8 rounded-full shadow-sm text-lg md:text-2xl text-white font-bold">
+              T
             </div>
-            <h1 className="bg-gradient-to-r from-black via-black to-rose-600 text-lg md:text-3xl font-semibold tracking-tight bg-clip-text text-transparent">
-              Tareq
+            <h1 className="bg-gradient-to-r from-black via-black to-rose-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
+              areq.
             </h1>
           </div>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm opacity-50">
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            isScroll ? "" : "bg-white shadow-sm opacity-50"
+          }`}
+        >
           <li>
             <a className="font-Ovo" href="#top">
               Home
