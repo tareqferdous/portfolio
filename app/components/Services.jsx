@@ -1,4 +1,4 @@
-import { serviceData } from "@/assets/assets";
+import { assets, serviceData } from "@/assets/assets";
 import Image from "next/image";
 
 const Services = () => {
@@ -12,7 +12,7 @@ const Services = () => {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
-        {serviceData.map(({ icon, title, description }, index) => (
+        {serviceData.map(({ icon, title, description, link }, index) => (
           <div
             key={index}
             className="border-[0.5px] border-gray-400 rounded-xl px-8 py-12 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black"
@@ -22,6 +22,10 @@ const Services = () => {
               {title}
             </h3>
             <p className="text-gray-600 text-sm leading-5">{description}</p>
+            <div className="flex items-center gap-2 text-sm mt-5">
+              <a href={link}>Read more</a>
+              <Image src={assets.right_arrow} alt="arrow" className="w-4" />
+            </div>
           </div>
         ))}
       </div>
