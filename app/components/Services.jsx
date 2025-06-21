@@ -33,8 +33,8 @@ const Services = () => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
       >
-        I am a frontend developer from california, USA with 10 years of
-        experience in multiple companies like Microsoft, Tesla and Apple
+        I am a digital marketer from dhaka, BD with 2 years of experience in
+        multiple marketplace like Fiverr, Upwork and Freelancer
       </motion.p>
 
       <motion.div

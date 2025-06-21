@@ -35,8 +35,8 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I am a digital marketer with 2 years of experience in multiple companies
-        like Microsoft, Tesla and Apple
+        I am a digital marketer with 2 years of experience in multiple
+        marketplace like Fiverr, Upwork and Freelancer
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
