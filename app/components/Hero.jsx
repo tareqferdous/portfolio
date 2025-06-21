@@ -18,7 +18,7 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo"
       >
-        Hi! I am William Mark{" "}
+        Hi! I am Tareq Ferdous{" "}
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </motion.h3>
       <motion.h1
@@ -27,7 +27,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        frontend web developer <br /> based in London
+        A digital marketing expert <br /> based in dhaka
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -35,8 +35,8 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I am a frontend developer from california, USA with 10 years of
-        experience in multiple companies like Microsoft, Tesla and Apple
+        I am a digital marketer with 2 years of experience in multiple companies
+        like Microsoft, Tesla and Apple
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">

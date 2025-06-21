@@ -5,11 +5,20 @@ const Footer = ({ isDarkMode }) => {
   return (
     <div className="mt-20">
       <div className="text-center">
-        <Image
-          src={isDarkMode ? assets.logo_dark : assets.logo}
-          alt=""
-          className="w-36 mx-auto mb-2"
-        />
+        <div className="inline-flex items-center space-x-1">
+          <div className="flex items-center justify-center bg-rose-600 p-2 w-8 h-8 rounded-full shadow-sm text-lg md:text-2xl text-white font-bold">
+            T
+          </div>
+          {isDarkMode ? (
+            <h1 className="bg-gradient-to-r from-white via-white to-rose-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
+              areq.
+            </h1>
+          ) : (
+            <h1 className="bg-gradient-to-r from-black via-black to-rose-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
+              areq.
+            </h1>
+          )}
+        </div>
         <div className="w-max flex items-center gap-2 mx-auto">
           <Image
             src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
