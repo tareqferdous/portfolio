@@ -50,19 +50,11 @@ const Contact = () => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-5xl font-Ovo"
+        className="text-center text-5xl font-Ovo mb-4"
       >
         Get in touch
       </motion.h2>
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
-      >
-        I would love to hear from you! If you have any questions, comments or
-        feedback, please use the form below.
-      </motion.p>
+      <div className="w-24 h-1 bg-gradient-to-r from-gray-500 to-lime-500 mx-auto rounded-full"></div>
 
       <form
         initial={{ opacity: 0 }}

@@ -50,15 +50,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       >
         <Link href="/" className="flex items-center space-x-2">
           <div className="inline-flex items-center space-x-1">
-            <div className="flex items-center justify-center bg-rose-600 p-2 w-8 h-8 rounded-full shadow-sm text-lg md:text-2xl text-white font-bold">
+            <div className="flex items-center justify-center bg-lime-600 p-2 w-8 h-8 rounded-full shadow-sm text-lg md:text-2xl text-white font-bold">
               T
-            </div>
+            </div>{" "}
             {isDarkMode ? (
-              <h1 className="bg-gradient-to-r from-white via-white to-rose-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
+              <h1 className="bg-gradient-to-r from-white via-white to-purple-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
                 areq.
               </h1>
             ) : (
-              <h1 className="bg-gradient-to-r from-black via-black to-rose-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
+              <h1 className="bg-gradient-to-r from-black via-black text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
                 areq.
               </h1>
             )}
@@ -83,8 +83,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#services">
-              Services
+            <a className="font-Ovo" href="#experience">
+              Experience
             </a>
           </li>
           <li>
@@ -107,7 +107,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               className="w-6"
             />
           </button>
-          <a
+          {/* <a
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50"
           >
@@ -117,7 +117,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               className="w-3"
               alt="Contact"
             />
-          </a>
+          </a> */}
 
           <button onClick={openMenu} className="block md:hidden">
             <Image

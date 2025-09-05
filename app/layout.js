@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden`}
       >
-        <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-100 dark:text-white">
+        <div className="w-screen h-screen bg-gradient-to-b from-gray-50 to-lime-100  dark:text-white">
           {children}
         </div>
       </body>

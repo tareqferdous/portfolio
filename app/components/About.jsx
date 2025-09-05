@@ -23,10 +23,11 @@ const About = ({ isDarkMode }) => {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-5xl font-Ovo"
+        className="text-center text-5xl font-Ovo mb-4"
       >
         About me
       </motion.h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-gray-500 to-lime-500 mx-auto rounded-full"></div>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -53,10 +54,10 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-Ovo">
-            I am an Digital marketing expert with over two years of professional
-            expertise in the field. Throughout my career, I have had the
-            privilege of collaborating with prestigious organizations,
-            contributing to their success and growth.
+            I’m a passionate Frontend Developer with over 2 years of experience
+            specializing in React and Next.js. I build responsive, accessible,
+            and high-performance web applications, turning designs into seamless
+            user interfaces that deliver exceptional digital experiences.
           </p>
 
           <motion.ul
@@ -92,7 +93,7 @@ const About = ({ isDarkMode }) => {
             transition={{ duration: 0.5, delay: 1.3 }}
             className="my-6 text-gray-700 font-ovo dark:text-white/80"
           >
-            Tools I use
+            Expertise
           </motion.h4>
           <motion.ul
             initial={{ opacity: 0 }}

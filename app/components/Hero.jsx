@@ -27,7 +27,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo"
       >
-        A digital marketing expert <br /> based in dhaka
+        Frontend Developer Crafting Digital Excellence <br />
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -35,8 +35,7 @@ const Hero = () => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-Ovo"
       >
-        I am a digital marketer with 2 years of experience in multiple
-        marketplace like Fiverr, Upwork and Freelancer
+        I build exceptional digital experiences where design meets technology.
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
@@ -47,7 +46,7 @@ const Hero = () => {
           href="#contact"
           className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
         >
-          contact me{" "}
+          Contact me{" "}
           <Image src={assets.right_arrow_white} alt="" className="w-4" />
         </motion.a>
 
@@ -59,7 +58,8 @@ const Hero = () => {
           download
           className="px-10 py-3 border rounded-full border-gray-500  flex items-center gap-2 bg-white dark:text-black"
         >
-          contact me <Image src={assets.download_icon} alt="" className="w-4" />
+          Download CV{" "}
+          <Image src={assets.download_icon} alt="" className="w-4" />
         </motion.a>
       </div>
     </div>

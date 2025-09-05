@@ -1,69 +1,139 @@
-import { assets, serviceData } from "@/assets/assets";
 import { motion } from "motion/react";
-import Image from "next/image";
 
 const Services = () => {
+  const experiences = [
+    {
+      id: 1,
+      company: "Flight Expert Ltd.",
+      position: "Software Developer",
+      duration: "Oct 2022 - Apr 2024",
+      location: "Motijheel, Dhaka",
+      description:
+        "building responsive web apps, developing reusable components, and resolving live-site issues on high-traffic platforms",
+      technologies: ["React", "Next Js", "Bootstrap", "REST APIs"],
+      achievements: [
+        "Built responsive web apps with React & JavaScript",
+        "Developed reusable UI components & optimized performance",
+        "Handled production bugs to ensure site stability",
+      ],
+    },
+    {
+      id: 2,
+      company: "Innalytx.",
+      position: "Frontend Developer Intern",
+      duration: "Feb 2022 - May 2022",
+      location: "Remote",
+      description:
+        "Assisted in developing and maintaining responsive web applications using React and modern frontend technologies during internship",
+      technologies: ["React", "Ant Design", "Redux", "REST APIs"],
+      achievements: [
+        "Built responsive web apps with React & JavaScript",
+        "Assisted in developing UI components and features",
+        "Worked with Git, debugging, and cross-browser fixes",
+      ],
+    },
+  ];
+
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      id="services"
+      id="experience"
       className="w-full px-[12%] py-10 scroll-mt-20"
     >
-      <motion.h4
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-        className="text-center mb-2 text-lg font-Ovo"
-      >
-        What I Offer
-      </motion.h4>
-      <motion.h2
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-        className="text-center text-5xl font-Ovo"
-      >
-        My Services
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7, duration: 0.5 }}
-        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
-      >
-        I am a digital marketer from dhaka, BD with 2 years of experience in
-        multiple marketplace like Fiverr, Upwork and Freelancer
-      </motion.p>
+      <div className="text-center mb-12">
+        <motion.h4
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mb-2 text-lg font-Ovo"
+        >
+          Professional
+        </motion.h4>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className=" text-5xl text-gray-900 mb-4 "
+        >
+          Experience
+        </motion.h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-gray-500 to-lime-500 mx-auto rounded-full"></div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 0.6 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10"
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="grid md:grid-cols-2 gap-8"
       >
-        {serviceData.map(({ icon, title, description, link }, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            key={index}
-            className="border-[0.5px] border-gray-400 rounded-xl px-8 py-12 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkHover dark:hover:shadow-white"
+        {experiences.map((exp) => (
+          <div
+            key={exp.id}
+            className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 overflow-hidden"
           >
-            <Image src={icon} alt={title} className="w-10" />
-            <h3 className="text-lg my-4 font-semibold text-gray-700 dark:text-white">
-              {title}
-            </h3>
-            <p className="text-gray-600 text-sm leading-5 dark:text-white/80">
-              {description}
-            </p>
-            <div className="flex items-center gap-2 text-sm mt-5">
-              <a href={link}>Read more</a>
-              <Image src={assets.right_arrow} alt="arrow" className="w-4" />
+            {/* Header */}
+            <div className="bg-lime-100 p-6 border-b border-gray-100">
+              <div className="mb-3">
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  {exp.position}
+                </h3>
+                <p className="text-lg font-medium text-lime-700 mt-1">
+                  {exp.company}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                <span>{exp.duration}</span>
+                <span>{exp.location}</span>
+              </div>
             </div>
-          </motion.div>
+
+            {/* Content */}
+            <div className="p-6">
+              {/* Technologies */}
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">
+                  Technologies Used
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded-full border border-blue-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Key Achievements */}
+              <div>
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">
+                  Key Achievements
+                </h4>
+                <ul className="space-y-2">
+                  {exp.achievements.map((achievement, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 text-sm text-gray-600"
+                    >
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Bottom accent */}
+            <div className="h-1 bg-gradient-to-r from-gray-500 to-lime-500 group-hover:from-gray-600 group-hover:to-lime-700 transition-all duration-300"></div>
+          </div>
         ))}
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 };
 

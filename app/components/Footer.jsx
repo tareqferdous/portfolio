@@ -6,7 +6,7 @@ const Footer = ({ isDarkMode }) => {
     <div className="mt-20">
       <div className="text-center">
         <div className="inline-flex items-center space-x-1">
-          <div className="flex items-center justify-center bg-rose-600 p-2 w-8 h-8 rounded-full shadow-sm text-lg md:text-2xl text-white font-bold">
+          <div className="flex items-center justify-center bg-lime-600 p-2 w-8 h-8 rounded-full shadow-sm text-lg md:text-2xl text-white font-bold">
             T
           </div>
           {isDarkMode ? (
@@ -14,7 +14,7 @@ const Footer = ({ isDarkMode }) => {
               areq.
             </h1>
           ) : (
-            <h1 className="bg-gradient-to-r from-black via-black to-rose-600 text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
+            <h1 className="bg-gradient-to-r from-black via-black  text-lg md:text-3xl font-semibold tracking-wide bg-clip-text text-transparent">
               areq.
             </h1>
           )}
@@ -33,12 +33,12 @@ const Footer = ({ isDarkMode }) => {
         <p>@ 2025 Tareq Ferdous. All rights reserved.</p>
         <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li>
-            <a target="_blank" href="github.com/tareqferdous">
+            <a target="_blank" href="https://github.com/tareqferdous">
               GitHub
             </a>
           </li>
           <li>
-            <a target="_blank" href="linkedin.com/in/tareqferdous/">
+            <a target="_blank" href="https://linkedin.com/in/tareqferdous">
               Linkedin
             </a>
           </li>
