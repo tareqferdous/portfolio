@@ -55,7 +55,7 @@ const Services = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className=" text-5xl text-gray-900 mb-4 "
+          className=" text-5xl  mb-4 "
         >
           Experience
         </motion.h2>
@@ -66,12 +66,12 @@ const Services = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
-        className="grid md:grid-cols-2 gap-8"
+        className="grid md:grid-cols-2 gap-8 dark:text-black"
       >
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 overflow-hidden"
+            className="group rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 overflow-hidden"
           >
             {/* Header */}
             <div className="bg-lime-100 p-6 border-b border-gray-100">
@@ -91,12 +91,10 @@ const Services = () => {
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-6 dark:text-white">
               {/* Technologies */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-900 mb-3">
-                  Technologies Used
-                </h4>
+                <h4 className="text-sm  mb-3">Technologies Used</h4>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, index) => (
                     <span
@@ -111,15 +109,10 @@ const Services = () => {
 
               {/* Key Achievements */}
               <div>
-                <h4 className="text-sm font-semibold text-gray-900 mb-3">
-                  Key Achievements
-                </h4>
+                <h4 className="text-sm font-semibold mb-3">Key Achievements</h4>
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start gap-3 text-sm text-gray-600"
-                    >
+                    <li key={index} className="flex items-start gap-3 text-sm">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span>{achievement}</span>
                     </li>
