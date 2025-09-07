@@ -83,7 +83,7 @@ export const workData = [
     title: "Movie DB",
     description: "Social Media",
     bgImage: "/movieDB.PNG",
-    link: "https://movie-db-wine-one.vercel.app/",
+    link: "https://movie-db-swart-xi.vercel.app/",
   },
   {
     title: "Stay Swift",
